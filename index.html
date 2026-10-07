@@ -776,7 +776,7 @@
             color: #65625d;
         }
 
-        /* --- Featured Project Showcase (Swixzelo) --- */
+        /* --- Featured Project Showcase (Travelo) --- */
         .project-featured {
             background: linear-gradient(145deg, #151b22, #0d1217);
             border: 1px solid rgba(255, 255, 255, .16);
@@ -842,6 +842,17 @@
             letter-spacing: 0.5px;
             color: #adb5bb;
             border: 1px solid rgba(255, 255, 255, .06);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            transition: color .2s, border-color .2s, background .2s;
+        }
+
+        .mock-url:hover {
+            color: #efaa78;
+            border-color: rgba(239, 170, 120, .3);
+            background: rgba(239, 170, 120, .08);
         }
 
         .mock-live {
@@ -1095,6 +1106,26 @@
             color: #ccd2d6;
             border-color: rgba(255, 255, 255, .15);
             background: rgba(255, 255, 255, .04);
+        }
+
+        .project-featured .project-link {
+            color: #efaa78;
+            border-bottom: 1.5px solid rgba(239, 170, 120, 0.4);
+            margin-top: 20px;
+            font-size: 12.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: color .2s, border-color .2s;
+        }
+
+        .project-featured .project-link:hover {
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        .project-featured .project-link:hover span {
+            transform: translate(3px, -3px);
         }
 
         /* --- Standard Project Grid --- */
@@ -2198,21 +2229,21 @@
                     </div>
                 </div>
 
-                <!-- Featured Showcase Project: Swixzelo -->
+                <!-- Featured Showcase Project: Travelo -->
                 <article class="project-featured reveal">
                     <div class="featured-media-container">
                         <div class="featured-mock-header">
                             <div class="mock-dots">
                                 <span></span><span></span><span></span>
                             </div>
-                            <div class="mock-url">swixzelo.com &nbsp;·&nbsp; 3D Experience</div>
+                            <a class="mock-url" href="https://travelonine.vercel.app/#home" target="_blank" rel="noopener">travelonine.vercel.app &nbsp;·&nbsp; Live Site ↗</a>
                             <div class="mock-live"><span class="live-dot"></span> Interactive</div>
                         </div>
                         <div class="featured-video-wrapper" id="featuredVideoWrapper">
                             <video id="featuredVideo" class="featured-video" autoplay loop muted playsinline preload="auto">
                                 <source src="swixzelo-mp4.mp4" type="video/mp4">
                             </video>
-                            <div class="featured-overlay-badge">✦ 3D BAG CUSTOMIZER &amp; SCROLL SYSTEM</div>
+                            <div class="featured-overlay-badge">✦ INTERACTIVE SCROLL &amp; ZIPPER STAGE</div>
                             
                             <!-- Interactive Video Controls & Scrubber -->
                             <div class="video-controls-bar" id="videoControls">
@@ -2239,33 +2270,34 @@
                     <div class="featured-content">
                         <div class="featured-top-meta">
                             <span class="featured-tag-badge">FEATURED PROJECT</span>
-                            <span class="project-label">FOR SWIXZELO</span>
+                            <span class="project-label">FOR TRAVELO</span>
                         </div>
-                        <h3 class="featured-title">Interactive Product Website</h3>
+                        <h3 class="featured-title">Interactive Travel Gear Experience</h3>
                         <p class="featured-desc">
-                            Product-focused e-commerce experience with interactive 3D bag views, scroll animations and immersive product exploration.
+                            Brand-focused e-commerce experience featuring a scroll-driven central zipper reveal, compression packing cubes showcase, and smooth interactive product exploration.
                         </p>
                         <div class="featured-highlights">
                             <div class="highlight-item">
-                                <b>3D SHOWCASE</b>
-                                <span>360° Real-time Model Viewer</span>
+                                <b>INTERACTIVE STAGE</b>
+                                <span>Scroll-Driven Zipper System</span>
                             </div>
                             <div class="highlight-item">
-                                <b>SCROLL STORY</b>
-                                <span>Physics-Driven Animations</span>
+                                <b>SMART PACKING</b>
+                                <span>Compression Gear Showcase</span>
                             </div>
                             <div class="highlight-item">
                                 <b>ECOMMERCE</b>
-                                <span>Immersive Bag Customizer</span>
+                                <span>Modular Sets &amp; Cart System</span>
                             </div>
                         </div>
                         <div class="tags">
-                            <span class="tag">Interactive 3D</span>
-                            <span class="tag">Scroll Animations</span>
+                            <span class="tag">Interactive UI</span>
+                            <span class="tag">GSAP / ScrollTrigger</span>
                             <span class="tag">E-Commerce</span>
-                            <span class="tag">WebGL / Three.js</span>
+                            <span class="tag">Canvas &amp; SVG</span>
                             <span class="tag">Responsive UI</span>
                         </div>
+                        <a class="project-link" href="https://travelonine.vercel.app/#home" target="_blank" rel="noopener">Visit travelonine.vercel.app <span>↗</span></a>
                     </div>
                 </article>
 
@@ -2663,7 +2695,7 @@
             }, { passive: true });
         }
 
-        // --- Custom Interactive Video Scrubber for Swixzelo ---
+        // --- Custom Interactive Video Scrubber for Travelo ---
         const featVideo = document.getElementById('featuredVideo');
         const playBtn = document.getElementById('videoPlayBtn');
         const timeline = document.getElementById('videoTimeline');
